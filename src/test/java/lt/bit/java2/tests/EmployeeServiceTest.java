@@ -26,13 +26,13 @@ public class EmployeeServiceTest {
 
     // tikuosi kad is viso yra 6 employees irasai
     // ir 3'ias employee irasas turi 2 salary irasus
-    @Test
-    void test() {
-        List<Employee> employees = EmployeeService.loadEmployees(2, 5);
-        assertNotNull(employees);
-        assertEquals(4, employees.size());
-        assertNotNull(employees.get(0).getSalaries());
-        assertEquals(2, employees.get(0).getSalaries().size());
-        assertEquals(3, employees.get(1).getSalaries().size());
-    }
+//    @Test
+//    void test() {
+//        List<Employee> employees = EmployeeService.loadEmployees(2, 5);
+//        assertNotNull(employees);
+//        assertEquals(4, employees.size());
+//        assertNotNull(employees.get(0).getSalaries());
+//        assertEquals(2, employees.get(0).getSalaries().size());
+//        assertEquals(3, employees.get(1).getSalaries().size());
+//    }
 }

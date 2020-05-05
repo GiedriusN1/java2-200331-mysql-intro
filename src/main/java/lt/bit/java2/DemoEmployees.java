@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import lt.bit.java2.model.Employee;
 import lt.bit.java2.services.DBService;
 import lt.bit.java2.services.EmployeeMap;
+import lt.bit.java2.services.EmployeeService;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -76,6 +77,15 @@ public class DemoEmployees {
 
 //        getSalariesByEmp(10001, 100);
 
+        // ce mano
+ //       Statement statement = conn.createStatement();
+ //       CREATE TABLE employee(emp_no INT PRIMARY KEY, first_name VARCHAR(100), last_name VARCHAR(100), gender CHAR(1), birth_date DATE, hire_date DATE);
+ //        CREATE TABLE salaries(emp_no INT PRIMARY KEY, salary int, from_date DATE, to_date DATE);
+ //     INSERT into  employees VALUES(1,'Koronas','Virusauskas','M',01/01/1966,02/02/2020);
+ //     insert into salaries values (1,50000,'2020-02-02','2020-02-29');
+ //    insert into salaries values (1,55000,'2020-03-01','2020-03-31');
+ //     ALTER TABLE salaries drop primary key;
+
         long start = System.currentTimeMillis();
         long count = 0;
         for (int i = 0; i < 1000; i++) {
@@ -87,7 +97,7 @@ public class DemoEmployees {
         System.out.println("Viso: " + count + " per " + time + "ms");
     }
 
-
+    List<Employee> employees = EmployeeService.loadEmployees(1, 2);
 
     static List<Employee> getEmployees() {
         try (
