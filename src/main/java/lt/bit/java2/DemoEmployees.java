@@ -77,7 +77,7 @@ public class DemoEmployees {
 
 //        getSalariesByEmp(10001, 100);
 
-        // ce mano
+        // ce jau  mano
  //       Statement statement = conn.createStatement();
  //       CREATE TABLE employee(emp_no INT PRIMARY KEY, first_name VARCHAR(100), last_name VARCHAR(100), gender CHAR(1), birth_date DATE, hire_date DATE);
  //        CREATE TABLE salaries(emp_no INT PRIMARY KEY, salary int, from_date DATE, to_date DATE);
