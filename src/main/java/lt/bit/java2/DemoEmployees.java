@@ -128,8 +128,8 @@ public class DemoEmployees {
                 )
         {
 
-            statement.setInt(1, empNo);
-            statement.setInt(2, limit);
+            statement.setInt(2, empNo);
+            statement.setInt(5, limit);
 
             try (ResultSet resultSet = statement.executeQuery()) { // 2 zingsnis
 

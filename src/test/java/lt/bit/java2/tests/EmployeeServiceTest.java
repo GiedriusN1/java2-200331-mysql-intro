@@ -77,16 +77,13 @@ public class EmployeeServiceTest {
                         " (4, '2020-02-15', '9999-01-01', 1300)," +
                         " (4, '2020-02-15', '9999-01-01', 1300)," +
                         " (5, '2018-03-05', '9999-01-01', 1111)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
-                        " (4, '2020-02-15', '9999-01-01', 1300)," +
+                        " (10, '2020-02-15', '9999-01-01', 1300)," +
+                        " (11, '2020-02-15', '9999-01-01', 1300)," +
+                        " (11, '2020-02-15', '9999-01-01', 1300)," +
+                        " (12, '2020-01-15', '9999-01-01', 1300)," +
+                        " (12, '2020-03-15', '9999-01-01', 1300)," +
+                        " (12, '2020-02-15', '9999-01-01', 1300)," +
                         " (14, '2020-02-01', '9999-01-01', 999)"
-
-
-
                         // TODO pabaigti
         );
         connection.commit();
@@ -103,12 +100,13 @@ public class EmployeeServiceTest {
 
     @Test
     void test() {
-        // Page #:         0         1            2
-        // Employees:  1-2-3-4-5 6-7-8-9-10 11-12-13-14
-        // Salaries:   - - - - - - - - - -  2  3  -  -
+        // Page #:         0          1            2
+        // Employees:  1-2-3-4-5  6-7-8-9-10  11-12-13-14
+        // Salaries:   - - - - -  - - - - -    2  3  -  -
         List<Employee> employees = EmployeeService.loadEmployees(2, 5);
         assertNotNull(employees);
         assertEquals(4, employees.size());
+        System.out.println(employees.size());
         assertNotNull(employees.get(0).getSalaries());
         assertEquals(2, employees.get(0).getSalaries().size());
         assertEquals(3, employees.get(1).getSalaries().size());
