@@ -97,7 +97,7 @@ public class DemoEmployees {
         System.out.println("Viso: " + count + " per " + time + "ms");
     }
 
-    List<Employee> employees = EmployeeService.loadEmployees(1, 2);
+    List<Employee> employees = EmployeeService.loadEmployees(2, 5);
 
     static List<Employee> getEmployees() {
         try (
@@ -111,6 +111,7 @@ public class DemoEmployees {
                 while (resultSet.next()) {
                     employees.add(EmployeeMap.fromResultSet(resultSet));   // 3 zingsnis
                 }
+
                 return employees;
             }
 
@@ -118,6 +119,7 @@ public class DemoEmployees {
             e.printStackTrace();
         }
         return null;
+
     }
 
     static void getSalariesByEmp(int empNo, int limit) {
