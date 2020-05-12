@@ -53,6 +53,8 @@ public class EmployeeService {
                         resultSet.getDate("from_date")
 
                 );
+
+                employeeList.add(EmployeeMap.fromResultSet(resultSet));
       }
 
 
@@ -82,15 +84,15 @@ public class EmployeeService {
 //            while (resultSet.next());
 
                 // bandau susideti duomenis
-       try {
-
-            while (resultSet.next()) {
-                 employeeList.add(EmployeeMap.fromResultSet(resultSet));
-            }
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+//       try {
+//
+//            while (resultSet.next()) {
+//                 employeeList.add(EmployeeMap.fromResultSet(resultSet));
+//            }
+//
+//        } catch (SQLException e) {
+//            System.out.println(e.getMessage());
+//        }
 
         System.out.println("EmployeeService.employeeList.size  " + employeeList.size());
 
