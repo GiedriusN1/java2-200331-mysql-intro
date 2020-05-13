@@ -49,7 +49,6 @@ public class EmployeeService {
                         resultSet.getInt("salary") + " " +
                         resultSet.getDate("to_date") + " " +
                         resultSet.getDate("from_date")
-
                 );
 
                 int currEmpNo = resultSet.getInt("emp_no");
@@ -78,9 +77,9 @@ public class EmployeeService {
                     employeeList.add(currentEmployee);
 
                 } else {
-                    // TODO jei empNo jau yra liste employeeList, pridedam tik salary i lista salary.
-                    // TODO cia reiktu i pasikartojancio emp_no Employee  Salaries ideti papildima lista
-
+                    /** TODO jei empNo toks pats kaip pries tai buves, pridedam tik salary i employee lista salary.
+                     TODO cia reiktu burtazodzio kad  Employee liste  Salaries ideti papildoma lista
+                     **/
                 }
                 lastEmpNo = currEmpNo;
             }
