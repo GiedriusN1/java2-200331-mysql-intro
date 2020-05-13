@@ -26,9 +26,7 @@ public class EmployeeService {
 
         try (Connection connection = DBService.getConnectionFromCP()) {
 
-            String sql = "SELECT * FROM (SELECT * FROM employees_test" +
-                    " LIMIT ?, ?) employees_test" +
-                    " LEFT JOIN salaries_test USING (emp_no);";
+            String sql = "SELECT * FROM employees_test WHERE LIMIT ?, ?;";
 
             PreparedStatement prepareStatement = connection.prepareStatement(sql);
             prepareStatement.setInt(1, pageSize * pageNo);
