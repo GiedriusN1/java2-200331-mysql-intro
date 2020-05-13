@@ -78,7 +78,7 @@ public class EmployeeService {
 
                 } else {
                     /** TODO jei empNo toks pats kaip pries tai buves, pridedam tik salary i employee lista salary.
-                     TODO cia reiktu burtazodzio kad  Employee liste  Salaries ideti papildoma lista
+                     TODO cia reiktu burtazodzio kad  Employee liste  Salaries ideti papildoma salary lista
                      **/
                 }
                 lastEmpNo = currEmpNo;
